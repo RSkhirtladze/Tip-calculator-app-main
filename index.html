@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./site.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="logoHolder">
+        <img src="./images/logo.svg" class="logo" />
+      </div>
+      <div class="card">
+        <div class="billSettingsContainer">
+          <div class="billContainer">
+            <div class="billSettingType">
+              <text class="billSettingTypeText">Bill</text>
+              <p id="billException" class="exceptions"></p>
+            </div>
+            <div class="settingInputContainer">
+              <div class="imgHolder">
+                <img src="./images/icon-dollar.svg" alt="" />
+              </div>
+              <input
+                id="billAmountElement"
+                class="amountElement"
+                type="text"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="tipSettingsContainer">
+            <div class="billSettingType">
+              <text class="billSettingTypeText">Select Tip %</text>
+              <p id="tipException" class="exceptions"></p>
+            </div>
+            <div class="tipPercentageContainer">
+              <div class="defaultTipAmount">5%</div>
+              <div class="defaultTipAmount">10%</div>
+              <div class="defaultTipAmount">15%</div>
+              <div class="defaultTipAmount">25%</div>
+              <div class="defaultTipAmount">50%</div>
+              <input id="customTipAmount" type="text" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="numberOfPeopleContainer">
+            <div class="billSettingType">
+              <text class="billSettingTypeText">Number of People</text>
+              <p id="numberOfPeopleException" class="exceptions"></p>
+            </div>
+            <div class="settingInputContainer">
+              <div class="imgHolder">
+                <img src="./images/icon-person.svg" alt="" />
+              </div>
+              <input
+                id="numberOfPeopleElement"
+                class="amountElement"
+                type="text"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="calculatedAmount">
+          <div class="billResult">
+            <div class="billResultPartial">
+              <div class="billResultTypeContainer">
+                <p class="top">Tip Amount</p>
+                <p class="bottom">/ person</p>
+              </div>
+              <p id="tipAmount" class="billResultDollars">$0.00</p>
+            </div>
+            <div class="billResultPartial">
+              <div class="billResultTypeContainer">
+                <p class="top">Total</p>
+                <p class="bottom">/ person</p>
+              </div>
+              <p id="total" class="billResultDollars">$0.00</p>
+            </div>
+          </div>
+          <button id="resetButton">Reset</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

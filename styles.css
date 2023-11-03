@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --backgroundColor: #c5e4e7;
+  --calculatedAmountBackgroundColor: #00474b;
+  --white: #fff;
+  --lightGreen: #26c2ae;
+  --veryLightGreen: #9fe8df;
+  --redish: #e17052;
+  --numberOfPeopleBackground: #f3f9fa;
+  --cantBeZeroColor: #e17457;
+  --darkGreenishColor: #7f9d9f;
+  --darkish: #5e7a7d;
+  --customColor: #547878;
+  --turnedOffButton: #0d686d;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--backgroundColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoHolder {
+  margin-top: 3.12rem;
+}
+
+.card {
+  width: 100%;
+  margin-top: 2.55rem;
+  border-radius: 1.5625rem 1.5625rem 0rem 0rem;
+  background: var(--white);
+  box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.2);
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.billSettingsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.billSettingType {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.exceptions {
+  color: var(--cantBeZeroColor);
+
+  text-align: right;
+  font-family: Space Mono;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.billContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.billSettingTypeText {
+  color: var(--darkish);
+  font-family: Space Mono;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.settingInputContainer {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.3125rem;
+  background: var(--numberOfPeopleBackground);
+  margin-top: 0.38rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.amountElement {
+  width: 100%;
+  border: none;
+  text-align: right;
+  background-color: var(--numberOfPeopleBackground);
+
+  color: var(--calculatedAmountBackgroundColor);
+  text-align: right;
+  font-family: Space Mono;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+}
+
+.amountElement::placeholder {
+  opacity: 0.35;
+}
+
+.tipSettingsContainer {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tipPercentageContainer {
+  width: 100%;
+  margin-top: 1rem;
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.defaultTipAmount {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.3125rem;
+  background: var(--calculatedAmountBackgroundColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
+  text-align: center;
+  font-family: Space Mono;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.defaultTipAmount:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.defaultTipAmount:nth-child(2) {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.defaultTipAmount:nth-child(3) {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.defaultTipAmount:nth-child(4) {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.defaultTipAmount:nth-child(5) {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.defaultTipAmount:nth-child(6) {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+#customTipAmount {
+  width: 100%;
+  text-align: right;
+  padding-right: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3125rem;
+  background: var(--numberOfPeopleBackground);
+
+  color: var(--customColor);
+  text-align: right;
+  font-family: Space Mono;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.numberOfPeopleContainer {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.calculatedAmount {
+  width: 100%;
+  border-radius: 0.9375rem;
+  background: var(--calculatedAmountBackgroundColor);
+  padding: 2.44rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.billResult {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.billResultPartial {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.billResultTypeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  width: 100%;
+  color: var(--white);
+  font-family: Space Mono;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.bottom {
+  width: 100%;
+  color: var(--darkGreenishColor);
+  font-family: Space Mono;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.billResultDollars {
+  color: var(--lightGreen);
+  text-align: right;
+  font-family: Space Mono;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.04169rem;
+}
+
+#resetButton {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.3125rem;
+  background: var(--turnedOffButton);
+  border: none;
+
+  margin-top: 2rem;
+
+  color: var(--calculatedAmountBackgroundColor);
+  text-align: center;
+  font-family: Space Mono;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  opacity: 0.35;
+}
+
+@media (min-width: 56rem) {
+  .logoHolder {
+    margin-top: 2rem;
+  }
+
+  .card {
+    max-width: 53rem;
+    margin: 5rem;
+    border-radius: 1.5625rem;
+    justify-self: flex-end;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .tipPercentageContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0.8rem;
+  }
+
+  .defaultTipAmount:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .defaultTipAmount:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .defaultTipAmount:nth-child(3) {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  .defaultTipAmount:nth-child(4) {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .defaultTipAmount:nth-child(5) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .defaultTipAmount:nth-child(6) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+
+  .calculatedAmount {
+    justify-content: space-between;
+  }
+}
